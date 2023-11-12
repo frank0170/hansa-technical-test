@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PaymentOptions from "./PaymentOptions";
 import { paymentProcessing } from "../../services/paymentService";
 
-const CheckoutContainer = () => {
+const CheckoutContainer = ({ render }) => {
   const [selectedPaymentProvider, setSelectedPaymentProvider] = useState(null);
 
   const handlePaymentProviderSelect = (provider) => {
@@ -17,9 +17,11 @@ const CheckoutContainer = () => {
     }
   };
 
-  return (
-    handlePaymentProviderSelect, setSelectedPaymentProvider, handleProcessOrder
-  );
+  return render({
+    handlePaymentProviderSelect,
+    setSelectedPaymentProvider,
+    handleProcessOrder,
+  });
 };
 
 export default CheckoutContainer;
