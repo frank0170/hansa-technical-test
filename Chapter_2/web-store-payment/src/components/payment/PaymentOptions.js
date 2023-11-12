@@ -1,5 +1,5 @@
 import React from "react";
-import { List, ListItem, ListItemText, Button } from "@mui/material";
+import { List, ListItemButton, ListItemText, Button } from "@mui/material";
 
 const PaymentOptions = ({
   onSelectPaymentProvider,
@@ -9,18 +9,19 @@ const PaymentOptions = ({
   const paymentProviders = ["Stripe", "Braintree", "PayPal"];
 
   return (
-    <div>
+    <div style={{ padding: "15px" }}>
+      <h1>Checkout Page</h1>
+
       <h2>Select Payment Provider:</h2>
       <List>
         {paymentProviders.map((provider) => (
-          <ListItem
-            button
+          <ListItemButton
             key={provider}
             selected={selectedProvider === provider}
             onClick={() => onSelectPaymentProvider(provider)}
           >
             <ListItemText primary={provider} />
-          </ListItem>
+          </ListItemButton>
         ))}
       </List>
 
