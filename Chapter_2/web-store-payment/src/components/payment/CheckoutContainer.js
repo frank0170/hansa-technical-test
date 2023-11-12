@@ -18,14 +18,7 @@ const CheckoutContainer = () => {
   };
 
   return (
-    <div style={{ padding: "15px" }}>
-      <h1>Checkout Page</h1>
-      <PaymentOptions
-        onSelectPaymentProvider={handlePaymentProviderSelect}
-        selectedProvider={selectedPaymentProvider}
-        handleProcessOrder={handleProcessOrder}
-      />
-    </div>
+    handlePaymentProviderSelect, setSelectedPaymentProvider, handleProcessOrder
   );
 };
 

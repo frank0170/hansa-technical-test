@@ -2,22 +2,24 @@ import React from "react";
 import { List, ListItem, ListItemText, Button } from "@mui/material";
 
 const PaymentOptions = ({
-  onSelectPaymentProvider,
-  selectedProvider,
+  handlePaymentProviderSelect,
+  setSelectedPaymentProvider,
   handleProcessOrder,
 }) => {
   const paymentProviders = ["Stripe", "Braintree", "PayPal"];
 
   return (
-    <div>
+    <div style={{ padding: "15px" }}>
+      <h1>Checkout Page</h1>
+
       <h2>Select Payment Provider:</h2>
       <List>
         {paymentProviders.map((provider) => (
           <ListItem
             button
             key={provider}
-            selected={selectedProvider === provider}
-            onClick={() => onSelectPaymentProvider(provider)}
+            selected={setSelectedPaymentProvider === provider}
+            onClick={() => handlePaymentProviderSelect(provider)}
           >
             <ListItemText primary={provider} />
           </ListItem>
