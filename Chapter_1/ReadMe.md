@@ -1,8 +1,8 @@
 ### Design Pattern:
 
-#### Presentational and Container Component Pattern:
+#### Smart and Dumb Component Pattern (Presentational and Container Component Pattern):
 
-- Am ales sa folosesc **Presentational and Container Component Pattern** care este bazat pe separarea componentelor pe baza de smart si dumb components pentru o mai buna intretinere, reutilizare si scalabilitate a codului. Practic, Smart Components se ocupa de procesarea logica si fetch-uri, dupa care trimite datele rezultate prin props catre Dumb Components, care se ocupa de parte de afisaj, prezentare si intercatiunea cu user-ul.
+- Am ales sa folosesc **Smart and Dumb Component Pattern (Presentational and Container Component Pattern)** care este bazat pe separarea componentelor pe baza de smart si dumb components pentru o mai buna intretinere, reutilizare si scalabilitate a codului. Practic, Smart Components se ocupa de procesarea logica si fetch-uri, dupa care trimite datele rezultate prin props catre Dumb Components, care se ocupa de parte de afisaj, prezentare si intercatiunea cu user-ul.
 
 - **Smart Components** gestioneaza logica, fetch-ul de date si gestionarea state-ului. Datele si callback-urile sunt trimise prin props catre Dumb Components.
 
