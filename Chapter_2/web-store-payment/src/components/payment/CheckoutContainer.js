@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import PaymentOptions from "./PaymentOptions";
+import { useState } from "react";
 import { paymentProcessing } from "../../services/paymentService";
 
 const CheckoutContainer = ({ render }) => {
@@ -19,7 +18,7 @@ const CheckoutContainer = ({ render }) => {
 
   return render({
     handlePaymentProviderSelect,
-    setSelectedPaymentProvider,
+    selectedPaymentProvider,
     handleProcessOrder,
   });
 };
