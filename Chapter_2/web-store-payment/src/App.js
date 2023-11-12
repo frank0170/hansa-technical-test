@@ -1,9 +1,10 @@
 import CheckoutContainer from "./components/payment/CheckoutContainer";
+import PaymentOptions from "./components/payment/PaymentOptions";
 
 function App() {
   return (
     <div>
-      <CheckoutContainer />
+      <CheckoutContainer render={(args) => <PaymentOptions {...args} />} />
     </div>
   );
 }
